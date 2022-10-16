@@ -1,22 +1,54 @@
 const str = "some test string";
 
 // A.
-const startEnd = [str[0], str[str.length - 1]];
+const findStartEndString = (str) => {
+    const startEnd = `First letter: ${str[0]}, Last letter: ${str[str.length - 1]}`;
 
-console.log('A.', startEnd);
+    return startEnd;
+}
+
+
+console.log('A.', findStartEndString(str));
 
 
 // B.
-const croppedStr = str.slice(1, -1);
+const firstAndLastLetterToUppercase = (str) => {
+    const croppedStr = str.slice(1, -1);
 
-const firstUpper = str[0].toUpperCase();
-const lastUpper = str[str.length - 1].toUpperCase();
+    const firstUpperLetter = str[0].toUpperCase();
+    const lastUpperLetter = str[str.length - 1].toUpperCase();
 
-const tmp = croppedStr.split('');
+    const tmpLettersArray = croppedStr.split('');
 
-tmp.unshift(firstUpper);
-tmp.push(lastUpper);
+    tmpLettersArray.unshift(firstUpperLetter);
+    tmpLettersArray.push(lastUpperLetter);
 
-const result = tmp.join('');
+    const result = tmpLettersArray.join('');
 
-console.log('B.', result);
+    return result;
+}
+
+
+console.log('B.', firstAndLastLetterToUppercase(str));
+
+
+//C.
+const findSecondSpace = (str) => {
+    const firstSpaceIndex = str.indexOf(' ');
+    const secondSpaceIndex = str.indexOf(' ', firstSpaceIndex + 1);
+
+    return secondSpaceIndex;
+}
+
+console.log('C.', findSecondSpace(str));
+
+
+//D.
+const getNewStringWithoutSixLetters = (str) => {
+    const newStringWithoutSixLetters = str.slice(0, -7);
+
+    return newStringWithoutSixLetters;
+}
+
+
+console.log('D.', getNewStringWithoutSixLetters(str))

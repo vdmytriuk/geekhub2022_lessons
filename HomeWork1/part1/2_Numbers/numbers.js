@@ -1,22 +1,31 @@
 // A.
-const PI = Math.PI;
+const croppedPI = (PI) => {
+    const croppedPI = +PI.toFixed(2);
 
-const croppedPI = +PI.toFixed(2);
+    return croppedPI;
+}
 
-console.log('A.', croppedPI);
+
+console.log('A.', croppedPI(Math.PI));
 
 
 // B.
-const brokenNumber = 0.6 + 0.7;
+const repairNumber = (brokenNumber) => {
+    const correctNumber = +brokenNumber.toFixed(10);
 
-const correctNumber = +brokenNumber.toFixed(10);
+    return correctNumber;
+}
 
-console.log('B.', correctNumber);
+
+console.log('B.', repairNumber(0.6 + 0.7));
 
 
 // C.
-const targetString = '100$';
+const getReceivedNumber = (targetString) => {
+    const receivedNumber = parseInt(targetString);
 
-const receivedNumber = parseInt(targetString);
+    return receivedNumber;
+}
 
-console.log('C.', receivedNumber);
+
+console.log('C.', getReceivedNumber('100$'));
