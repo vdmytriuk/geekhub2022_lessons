@@ -1,0 +1,35 @@
+/* CORE */
+
+@import "core/global.css";
+@import "core/fonts.css";
+@import "core/variables.css";
+@import "core/typography.css";
+
+
+/* LAYOUTS */
+
+@import "layouts/container.css";
+@import "layouts/footer.css";
+@import "layouts/header.css";
+
+
+/* SECTIONS */
+
+@import "sections/characteristics.css";
+@import "sections/info-section.css";
+@import "sections/welcome.css";
+
+
+/* PARTICLES */
+
+@import "particles/characteristic.css";
+@import "particles/grid.css";
+@import "particles/nav.css";
+@import "particles/tools.css";
+
+
+/* UI */
+
+@import "UI/arrow-anchor.css";
+@import "UI/button.css";
+

@@ -27,4 +27,4 @@ const createDoor = (number, start, stop) => {
     return door;
 }
 
-console.log(getDoorNumber(61))
+console.log(getDoorNumber(100))
