@@ -13,17 +13,7 @@ console.log('A.', findStartEndString(str));
 
 // B.
 const firstAndLastLetterToUppercase = (str) => {
-    const croppedStr = str.slice(1, -1);
-
-    const firstUpperLetter = str[0].toUpperCase();
-    const lastUpperLetter = str[str.length - 1].toUpperCase();
-
-    const tmpLettersArray = croppedStr.split('');
-
-    tmpLettersArray.unshift(firstUpperLetter);
-    tmpLettersArray.push(lastUpperLetter);
-
-    const result = tmpLettersArray.join('');
+    const result = str.replace(/(?:^.)|(?:.$)/g, string => string.toUpperCase());
 
     return result;
 }
@@ -44,11 +34,11 @@ console.log('C.', findSecondSpace(str));
 
 
 //D.
-const getNewStringWithoutSixLetters = (str) => {
-    const newStringWithoutSixLetters = str.slice(0, -7);
+const getNewStringWithoutSixSymbols = (str) => {
+    const newStringWithoutSixSymbols = str.slice(0, -6);
 
-    return newStringWithoutSixLetters;
+    return newStringWithoutSixSymbols;
 }
 
 
-console.log('D.', getNewStringWithoutSixLetters(str))
+console.log('D.', getNewStringWithoutSixSymbols(str))
