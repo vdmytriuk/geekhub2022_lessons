@@ -1,0 +1,7 @@
+.nav__list {
+    display: flex;
+}
+
+.nav__item:not(:last-of-type) {
+    margin-right: 3.2rem;
+}

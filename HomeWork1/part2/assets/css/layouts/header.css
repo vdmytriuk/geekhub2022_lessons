@@ -1,3 +1,20 @@
-header {
-    background: white;
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.8rem 13rem 1.8rem 7rem;
+    height: 8rem;
+    width: 100%;
+
+    background-color: var(--accent-color1);
+}
+
+.header__tools {
+    display: flex;
+    align-items: center;
 }

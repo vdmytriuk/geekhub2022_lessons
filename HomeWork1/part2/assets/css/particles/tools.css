@@ -1,0 +1,8 @@
+.tools {
+    display: flex;
+    align-items: center;
+}
+
+.tools .button {
+    margin: 0 3.2rem;
+}

@@ -1,0 +1,32 @@
+.info-section {
+    margin-bottom: 15rem;
+}
+
+.info-section:last-of-type {
+    margin-bottom: 12rem;
+}
+
+.info-section:nth-of-type(even) .container {
+    flex-direction: row-reverse;
+}
+
+.info-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info-section__description {
+    width: 41rem;
+}
+
+.info-section__image {
+    max-width: 32rem;
+    margin-right: 2rem;
+}
+
+.info-section:nth-of-type(even) .info-section__image {
+    margin-right: 0;
+    margin-left: 2rem;
+}
+

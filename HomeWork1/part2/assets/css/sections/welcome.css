@@ -1,0 +1,51 @@
+.welcome {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 13rem);
+
+    background-color: var(--accent-color2);
+}
+
+.welcome__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 62rem;
+    margin-bottom: 3rem;
+
+    text-align: center;
+}
+
+.welcome__inner > * {
+    color: var(--accent-color1);
+}
+
+.welcome__inner .button {
+    margin-top: 3.2rem;
+}
+
+.welcome__decoration {
+    position: absolute;
+}
+
+.welcome__decoration img {
+    mix-blend-mode: luminosity;
+}
+
+.welcome__decoration:nth-of-type(1) {
+    left: 10rem;
+    bottom: -5rem;
+
+    width: 39rem;
+}
+
+.welcome__decoration:nth-of-type(2) {
+    right: 13rem;
+    bottom: 9.5rem;
+
+    width: 34rem;
+}

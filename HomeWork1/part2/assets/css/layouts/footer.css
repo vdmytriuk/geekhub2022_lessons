@@ -1,0 +1,33 @@
+.footer {
+    padding: 9rem 0 6rem;
+
+    color: var(--accent-color1);
+
+    background-color: var(--black1);
+}
+
+.footer__top {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 12.8rem;
+    margin-bottom: 5.7rem;
+}
+
+.footer__heading {
+    margin-bottom: 2.4rem;
+}
+
+.footer__list {
+
+}
+
+.footer__list li:not(:last-of-type) {
+    margin-bottom: 1rem;
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 22%;
+}

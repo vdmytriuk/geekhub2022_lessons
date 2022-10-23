@@ -1,0 +1,26 @@
+.button {
+    padding: 1.2rem 2.3rem;
+    border: 1px solid;
+
+    transition: background-color, color .3s ease-in-out;
+}
+
+.button_white {
+    color: var(--accent-color2);
+
+    background-color: var(--accent-color1);
+    border-color: var(--accent-color2);
+}
+
+.button_black {
+    color: var(--accent-color1);
+
+    background-color: var(--black1);
+    border-color: var(--black1);
+}
+
+.button span {
+    font-family: 'Circular Std', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
