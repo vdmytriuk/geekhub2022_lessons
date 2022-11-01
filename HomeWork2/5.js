@@ -1,9 +1,9 @@
 const getWaterCells = (array) => {
   let count = 0;
-  let max = array.reduce((a, b) => a > b ? a : b);
+  let max = array.reduce((a, b) => a > b ? a : b, -Infinity);
 
   let left = 0;
-  let right = array.at(-1);
+  let right = array.length - 1;
 
   let leftMax = 0;
   let rightMax = 0;
@@ -29,4 +29,24 @@ const getWaterCells = (array) => {
   return count;
 }
 
-console.log(getWaterCells([2, 5, 1, 3, 1, 2, 1, 7, 7, 6]));
+//HOMEWORK EXAMPLES
+
+console.log('A.', getWaterCells([2, 5, 1, 3, 1, 2, 1, 7, 7, 6]));
+
+console.log('B.', getWaterCells([2, 1, 5, 0, 3, 4, 7, 2, 3, 1, 0]));
+
+console.log('C.', getWaterCells( [7, 0, 1, 3, 4, 1, 2, 1]));
+
+console.log('D.', getWaterCells( [2, 1, 5, 0, 3, 4, 7, 2, 3, 1, 0]));
+
+console.log('E.', getWaterCells([2, 2, 1, 2, 2, 3, 0, 1, 2]));
+
+console.log('F.', getWaterCells([2, 1, 5, 0, 3, 4, 7, 2, 3, 1, 8] ));
+
+console.log('G.', getWaterCells([2, 2, 2, 2, 2]));
+
+//FROM ISSUE
+
+console.log(getWaterCells([0, 10, 10, 0, 5, 7, 2, 0]));
+
+console.log(getWaterCells([2, 1, 5, 0, 3, 4, 7, 2, 3, 1, 0, 5]));

@@ -14,7 +14,6 @@ const minMaxSum = (array) => {
 
     if (array[i] < state.min) {
       state.min = array[i];
-      continue;
     }
 
     if (array[i] > state.max) {
