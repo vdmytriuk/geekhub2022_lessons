@@ -12,6 +12,8 @@
     width: 100%;
 
     background-color: var(--accent-color1);
+
+    overflow-x: clip;
 }
 
 .header__tools {

@@ -1,0 +1,12 @@
+.arrow-anchor {
+    display: flex;
+    align-items: center;
+    margin-top: 2.4rem;
+    width: fit-content;
+
+    color: var(--accent-color2);
+}
+
+.arrow-anchor img {
+    margin-left: 1rem;
+}

@@ -1,0 +1,36 @@
+.burger {
+    display: none;
+}
+
+.burger span {
+    display: block;
+    width: 3.8rem;
+    height: 2px;
+    margin-bottom: .9rem;
+
+    background-color: var(--black1);
+    border-radius: 2rem;
+
+    transition: .3s ease-in-out;
+}
+
+.burger span:nth-of-type(2) {
+    width: 2.5rem;
+}
+
+.burger span:last-of-type {
+    margin-bottom: 0;
+}
+
+.burger_active span:first-of-type {
+    transform: rotate(45deg) translateY(1.5rem);
+}
+
+.burger_active span:nth-of-type(2) {
+    transform: translateX(100%);
+
+    opacity: 0;
+}
+.burger_active span:last-of-type {
+    transform: rotate(-45deg) translateY(-1.5rem);
+}

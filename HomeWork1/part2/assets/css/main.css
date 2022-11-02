@@ -31,6 +31,15 @@
 /* UI */
 
 @import "UI/arrow-anchor.css";
+@import "UI/burger.css";
 @import "UI/button.css";
 @import "UI/login.css";
+
+/* MEDIA */
+
+@import "media/1150.css";
+@import "media/800.css";
+@import "media/550.css";
+
+
 
