@@ -1,0 +1,1 @@
+export const detectCards = () => document.querySelectorAll('.card');

@@ -1,0 +1,1 @@
+export const getTodos = () => JSON.parse(localStorage.getItem('cards'));

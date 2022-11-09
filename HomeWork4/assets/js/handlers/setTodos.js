@@ -1,0 +1,1 @@
+export const setTodos = (newTodos) => localStorage.setItem('cards', JSON.stringify(newTodos));

@@ -1,0 +1,13 @@
+.section {
+    width: 70%;
+}
+
+.section__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+}
+
+.section__sort {
+    margin-bottom: 2rem;
+}
