@@ -1,11 +1,12 @@
-import {detectCards} from "./detectCards.js";
-import {deleteTodo} from "../operations/deleteTodo.js";
-import {completeTodo} from "../operations/completeTodo.js";
 import {editTodo} from "../operations/editTodo.js";
-// import {dragAndDrop} from "../handlers/dragAndDrop.js";
+import {deleteTodo} from "../operations/deleteTodo.js";
+import {detectCards} from "./detectCards.js";
+import {dragAndDrop} from "../handlers/dragAndDrop.js";
+import {completeTodo} from "../operations/completeTodo.js";
 
 export const initCards = () => {
   const cards = detectCards();
+  const cardsHolder = document.querySelector('.section__cards');
 
   cards.forEach(card => {
     const cardId = card.getAttribute('data-id');
@@ -22,7 +23,7 @@ export const initCards = () => {
         completeTodo(cardId, e.target.checked);
     });
 
-    // dragAndDrop(card, cards);
+    dragAndDrop(card, cardsHolder);
   })
 
 }

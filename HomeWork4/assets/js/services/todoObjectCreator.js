@@ -20,7 +20,7 @@ export const todoObjectCreator = (formData) => {
 
     for (const entry of formData.entries()) {
         toDoObject.id = Date.now();
-        toDoObject.position = localStorage.position;
+        toDoObject.position = +localStorage.position;
         toDoObject[entry[0]] = entry[1];
         toDoObject.humanDate = `${date.toLocaleDateString()}  ${hours}:${minutes}`;
         toDoObject.completed = false;

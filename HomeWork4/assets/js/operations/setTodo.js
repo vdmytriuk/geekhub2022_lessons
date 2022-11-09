@@ -1,8 +1,8 @@
+import {setTodos} from "../handlers/setTodos.js";
+import {getTodos} from "../selectors/getTodos.js";
+import {resetForm} from "../services/resetForm.js";
 import {renderTodos} from "../core/renderTodos.js";
 import {todoObjectCreator} from "../services/todoObjectCreator.js";
-import {resetForm} from "../services/resetForm.js";
-import {getTodos} from "../selectors/getTodos.js";
-import {setTodos} from "../handlers/setTodos.js";
 
 export const setTodo = () => {
     const form = document.querySelector('.add-form');
