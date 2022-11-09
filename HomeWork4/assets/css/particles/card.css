@@ -8,6 +8,15 @@
     border-radius: 20px;
 }
 
+.card_completed {
+    border: 1px dashed var(--brown);
+    filter: grayscale(1) brightness(.8);
+}
+
+.card_hidden {
+    opacity: 0;
+}
+
 .card__tools {
     display: flex;
     justify-content: space-between;

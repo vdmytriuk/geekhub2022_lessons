@@ -1,14 +1,7 @@
-import {detectCards} from "../core/detectCards.js";
+import {sortTodos} from "../operations/sortTodos.js";
 
 export const sortByDate = () => {
-  const dateSelect = document.getElementById('dates');
-  const todosWrap = document.querySelector('.section__cards');
+  const dateButton = document.getElementById('dates');
 
-    dateSelect.addEventListener('change', () => {
-      const cards = detectCards();
-
-      cards.forEach(card => card.remove());
-
-      [...cards].sort((a, b) => a.id < b.id ? 1 : -1).forEach(card => todosWrap.appendChild(card))
-    });
+  return sortTodos(dateButton, 'dates')
 }

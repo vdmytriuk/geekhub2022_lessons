@@ -14,8 +14,8 @@
 
             <div class="container">
                 <aside class="aside">
-                    <form class="add-form">
-                        <h3 class="h3">
+                    <form class="add-form" data-todo-id="">
+                        <h3 id="formTitle" class="h3">
                             Add ToDo
                         </h3>
 
@@ -41,23 +41,26 @@
                             Sort by:
                         </h3>
 
-                        <label>
-                            <span>By title</span>
+                        <button
+                            id="titles"
+                            class="button js-sort"
+                        >
+                            By titles
+                        </button>
 
-                            <select name="titles" id="titles">
-                                <option value="up">From start</option>
-                                <option value="down">From end</option>
-                            </select>
-                        </label>
+                        <button
+                            id="dates"
+                            class="button js-sort"
+                        >
+                            By dates
+                        </button>
 
-                        <label>
-                            <span>By date</span>
-
-                            <select name="dates" id="dates">
-                                <option value="up">From newest</option>
-                                <option value="down">From oldest</option>
-                            </select>
-                        </label>
+                        <button
+                            id="reset"
+                            class="button button_reset"
+                        >
+                            Reset
+                        </button>
                     </div>
 
                     <div class="section__cards"></div>

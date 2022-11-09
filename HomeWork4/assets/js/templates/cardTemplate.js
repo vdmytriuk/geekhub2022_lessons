@@ -1,10 +1,29 @@
-export const cardTemplate = ({id, title, description, humanDate}) => {
-    return `<div data-id="${id}" class="card">
+export const cardTemplate =
+    ({
+         id,
+         position,
+         title,
+         description,
+         humanDate,
+         completed
+    }) => {
+
+    return `<div 
+                data-id="${id}" 
+                data-title="${title}" 
+                data-position="${position}"
+                class="card ${completed ? 'card_completed' : ''}"
+                draggable="true"
+             >
                 <div class="card__tools">
                     <label class="card__checkbox">
-                        <span>Done</span>
+                        <span>Completed</span>
     
-                        <input type="checkbox">
+                        <input 
+                            type="checkbox" 
+                            name="completed" 
+                            ${completed ? 'checked' : ''}
+                        >
                     </label>
     
                     <div class="card__controls">

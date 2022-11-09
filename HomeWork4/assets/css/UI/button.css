@@ -11,3 +11,12 @@
     background-color: var(--main-color);
     border-radius: 10px;
 }
+
+.button_active {
+    filter: brightness(1.2);
+}
+
+.button_reset {
+    margin-left: 2rem;
+    filter: grayscale(1);
+}
