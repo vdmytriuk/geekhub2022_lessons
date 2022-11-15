@@ -1,0 +1,7 @@
+.search-dropdown {
+    display: none;
+}
+
+.search-dropdown_active {
+    display: block;
+}
