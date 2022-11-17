@@ -1,7 +1,7 @@
 .h1,
 .h2,
 .h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 .h1 {
@@ -17,6 +17,7 @@
 
     font-size: 4rem;
     font-weight: 500;
+    color: var(--grey);
 }
 
 .h3 {
@@ -24,4 +25,5 @@
 
     font-size: 2.8rem;
     font-weight: 500;
+    color: var(--grey);
 }

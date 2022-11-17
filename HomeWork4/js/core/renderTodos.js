@@ -21,7 +21,7 @@ export const renderTodos = () => {
         break;
 
       default:
-        todosData = todosData.sort((a, b) => a.position > b.position ? 1 : -1);
+        todosData = todosData.sort((a, b) => a.position < b.position ? 1 : -1);
         break;
     }
 

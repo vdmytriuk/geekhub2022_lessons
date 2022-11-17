@@ -3,8 +3,16 @@
     width: 100%;
     border: 1px solid var(--black);
 
-    background-color: var(--dark-grey);
+    background-color: var(--background);
     border-radius: 10px;
+
+    transition: .3s ease-in-out;
+}
+
+.form-field:focus-within {
+    box-shadow: 0 0 10px 2px var(--brown);
+
+    border: 1px solid var(--main-color);
 }
 
 .form-field__input {

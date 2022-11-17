@@ -9,10 +9,13 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Sono', sans-serif;
     font-size: 1.6rem;
     font-weight: 300;
     line-height: 1.33;
+    color: var(--white);
+
+    background-color: var(--background);
 }
 
 
@@ -56,8 +59,8 @@ img {
 
 input,
 textarea {
-    font-family: 'Roboto', sans-serif;
-    color: var(--brown);
+    font-family: 'Sono', sans-serif;
+    color: var(--white);
 
     background-color: transparent;
     border: 0;
@@ -66,8 +69,15 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-    font-family: 'Roboto', sans-serif;
-    color: var(--brown);
+    font-family: 'Sono', sans-serif;
+    color: var(--main-color);
+    opacity: 1;
+    transition: .3s;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder{
+    opacity: 0;
 }
 
 textarea {

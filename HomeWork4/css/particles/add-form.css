@@ -4,8 +4,9 @@
     padding: 1.5rem;
     border: 1px solid var(--black);
 
-    background-color: var(--grey);
+    background-color: var(--brown2);
     border-radius: 20px;
+    box-shadow: 0 0 20px 3px var(--brown);
 }
 
 .add-form .form-field:not(:last-of-type) {
