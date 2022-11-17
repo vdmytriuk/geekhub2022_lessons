@@ -3,6 +3,10 @@
         width: 50vw;
     }
 
+    .welcome {
+        min-height: 82rem;
+    }
+
     .welcome__decoration:nth-of-type(1) {
         left: 2rem;
     }

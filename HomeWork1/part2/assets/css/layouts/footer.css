@@ -6,7 +6,7 @@
     background-color: var(--black1);
 }
 
-.footer__top {
+.footer__nav {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 12.8rem;
