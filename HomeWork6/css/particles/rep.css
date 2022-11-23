@@ -1,0 +1,16 @@
+.rep {
+    position: relative;
+
+    padding: 2rem 1.5rem;
+    width: 100%;
+    border: 1px dashed var(--accent-color);
+
+    background-color: var(--brown);
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.rep:not(:last-of-type) {
+    margin-bottom: 2rem;
+}

@@ -1,0 +1,9 @@
+.last-commit {
+    margin-top: 2rem;
+}
+
+.last-commit > p:first-of-type {
+    margin-bottom: 2rem;
+
+    font-size: 2rem;
+}

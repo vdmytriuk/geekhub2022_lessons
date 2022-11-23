@@ -1,0 +1,22 @@
+.card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem;
+    height: 70rem;
+    border: 1px solid var(--brown);
+
+    box-shadow: 0 0 10px 2px var(--brown);
+    background-color: var(--brown2);
+    border-radius: 20px;
+    overflow-y: auto;
+}
+
+
+
+.card__inner {
+    margin-bottom: 3rem;
+}

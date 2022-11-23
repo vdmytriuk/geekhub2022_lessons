@@ -1,0 +1,1 @@
+export const toggleLoader = wr => wr.classList.toggle('loading');

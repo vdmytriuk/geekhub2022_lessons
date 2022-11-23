@@ -1,0 +1,7 @@
+.repos-wrap {
+    width: calc(100% - 47rem);
+}
+
+.card {
+    justify-content: flex-start;
+}
