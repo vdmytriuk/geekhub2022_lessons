@@ -1,5 +1,5 @@
 const isPalindrome = (str) => {
-    str = str.toLowerCase();
+    str = str.toLowerCase().split(' ').join('');
 
     for(let i = 0; i < str.length / 2; i++) {
         if(str[i] !== str[str.length - i - 1]) {
@@ -10,4 +10,4 @@ const isPalindrome = (str) => {
     return true;
 }
 
-console.log(isPalindrome('aabb'))
+console.log(isPalindrome('A man a plan a canal Panama'))

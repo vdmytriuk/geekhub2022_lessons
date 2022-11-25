@@ -1,3 +1,5 @@
-const isSorted = arr => !!arr.reduce((accum, current) => accum !== false && current >= accum && current);
+const isSorted = arr => arr.length !== 0
+    ? !!arr.reduce((accum, current) => accum !== false && current >= accum && current)
+    : true
 
-console.log(isSorted([3, 9, -3, 10]))
+console.log(isSorted([]))
