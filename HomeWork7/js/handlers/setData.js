@@ -1,0 +1,1 @@
+export const setData = (data) => localStorage.setItem('data', JSON.stringify(data));
