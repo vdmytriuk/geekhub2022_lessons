@@ -1,0 +1,1 @@
+export const tamagochiTemplate = (id) => `<div class="tamagochi" data-tamagochi="${id}"></div>`
