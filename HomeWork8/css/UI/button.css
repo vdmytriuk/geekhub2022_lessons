@@ -1,0 +1,31 @@
+.button {
+    margin-top: 1.5rem;
+
+    padding: 1rem 2rem;
+    width: fit-content;
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    color: var(--brown);
+
+    background-color: var(--main-color);
+    border-radius: 10px;
+
+    transition: .25s ease-in-out;
+}
+
+.button:hover {
+    transform: scale(1.03);
+
+    box-shadow: 0 0 10px 3px var(--brown2);
+    filter: brightness(.85);
+}
+
+.button_active {
+    filter: brightness(1.4);
+}
+
+.button_reset {
+    margin-left: 2rem;
+    filter: grayscale(1);
+}

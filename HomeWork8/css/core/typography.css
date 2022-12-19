@@ -1,0 +1,17 @@
+.h1,
+.h2,
+.h3 {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.h2 {
+    margin-bottom: 2rem;
+
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--black);
+}
+
+strong {
+    color: var(--accent-color);
+}
