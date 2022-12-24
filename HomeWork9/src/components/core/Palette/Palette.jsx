@@ -8,18 +8,23 @@ import "./Palette.css";
 
 
 const Palette = () => {
-    const [count, setCount] = useState(1);
     const [rgbColor, setRgbColor] = useState({red: 127, green: 127, blue: 127});
     const [averageColor, setAverageColor] = useState(rgbColor);
+    const [allColors, setAllColors] = useState([rgbColor]);
     const [dominantColor, setDominantColor] = useState("All colors are equal");
 
+    const getSum = (arr, key) => arr.reduce((sum, current) => sum + current[key], 0);
     const getRandomNumb = max => Math.floor(Math.random() * max);
+    const getCorrectNumb = n => Number(n).toFixed();
 
     const generateNewAverage = (newColor) => {
+        const actualColors = [...allColors, newColor];
+        const {length} = actualColors;
+
         const averageColor = {
-            red: Number((rgbColor.red + newColor.red) / count).toFixed(),
-            green: Number((rgbColor.green + newColor.green) / count).toFixed(),
-            blue: Number((rgbColor.blue + newColor.blue) / count).toFixed(),
+            red: getCorrectNumb(getSum(actualColors, "red") / length),
+            green: getCorrectNumb(getSum(actualColors, "green") / length),
+            blue: getCorrectNumb(getSum(actualColors, "blue") / length),
         }
 
         setAverageColor(averageColor);
@@ -47,8 +52,6 @@ const Palette = () => {
     }
 
     const generateNewColor = () => {
-        setCount(prevState => prevState + 1);
-
         const newColor = {
             red: getRandomNumb(255),
             green: getRandomNumb(255),
@@ -56,6 +59,7 @@ const Palette = () => {
         }
 
         setRgbColor(newColor);
+        setAllColors(prevState => [...prevState, newColor]);
 
         generateNewDominant(newColor);
         generateNewAverage(newColor);
