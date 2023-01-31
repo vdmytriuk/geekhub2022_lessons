@@ -2,23 +2,25 @@ import React from 'react';
 import {useParams} from "react-router-dom";
 import {useLoading} from "../../hooks/useLoading";
 
-import {fetchOneTodo} from "../../http/API";
+import {fetchOneTodo} from "../../http/todosApi";
 
 import Card from "../../components/particles/Card/Card";
 import {Wrapper} from "../../components/layouts/Wrapper/Wrapper";
 
 
 const TodoPage = () => {
-    const {id, numb} = useParams();
-    const [todo] = useLoading(fetchOneTodo, {userId: id, todoId: numb});
+    const {userId, todoId} = useParams();
+    const [todo, loading] = useLoading(() => fetchOneTodo({userId, todoId}));
+
+    const todo_ = todo?.[0];
 
     return (
         <section>
-            <Wrapper loading={!!todo}>
-                {todo.length !== 0 &&
+            <Wrapper loading={loading}>
+                {todo_ &&
                     <Card
-                        title={todo[0].title}
-                        completed={todo[0].completed}
+                        title={todo_.title}
+                        completed={todo_.completed}
                     />
                 }
             </Wrapper>

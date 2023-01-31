@@ -1,19 +1,7 @@
-import $host from "./index";
+import $host from "./host";
 
 export const fetchAllTodos = async () => {
     const {data} = await $host.get('/todos');
-
-    return data;
-}
-
-export const fetchAllUsers = async () => {
-    const {data} = await $host.get('/users');
-
-    return data;
-}
-
-export const fetchOneUser = async (id) => {
-    const {data} = await $host.get(`/users/${id}`);
 
     return data;
 }

@@ -18,7 +18,7 @@ const Card = ({userId, todoId, title, completed}) => {
             </h3>
 
             {todoId &&
-                <Link to={`${ROUTER.routes.USER}/${userId}${ROUTER.routes.TODO}/${todoId}`}>
+                <Link to={ROUTER.routes.USER_TODO({userId, todoId})}>
                     View full information
                 </Link>
             }

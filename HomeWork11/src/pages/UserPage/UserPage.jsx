@@ -3,7 +3,8 @@ import React from 'react';
 import {useParams} from "react-router-dom";
 import {useLoading} from "../../hooks/useLoading";
 
-import {fetchOneUser, fetchOneUserTodos} from "../../http/API";
+import {fetchOneUser} from "../../http/userApi";
+import {fetchOneUserTodos} from "../../http/todosApi";
 
 import Card from "../../components/particles/Card/Card";
 import {Wrapper} from "../../components/layouts/Wrapper/Wrapper";
@@ -11,12 +12,12 @@ import {Wrapper} from "../../components/layouts/Wrapper/Wrapper";
 
 const UserPage = () => {
     const {id} = useParams();
-    const [user] = useLoading(fetchOneUser, id);
-    const [userTodos] = useLoading(fetchOneUserTodos, id);
+    const [user, userLoading] = useLoading(() => fetchOneUser(id));
+    const [userTodos, userTodosLoading] = useLoading(() => fetchOneUserTodos(id));
 
     return (
         <section>
-            <Wrapper loading={!!user && !!userTodos}>
+            <Wrapper loading={userLoading || userTodosLoading}>
                 {userTodos && user &&
                     <>
                         <h2>
@@ -32,7 +33,7 @@ const UserPage = () => {
                         </h2>
 
                         <div>
-                            {userTodos.map(todo =>
+                            {userTodos.map(todo => (
                                 <Card
                                     key={todo.id}
                                     id={todo.id}
@@ -41,7 +42,7 @@ const UserPage = () => {
                                     title={todo.title}
                                     completed={todo.completed}
                                 />
-                            )}
+                            ))}
                         </div>
                     </>
                 }

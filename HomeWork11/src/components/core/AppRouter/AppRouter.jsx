@@ -16,9 +16,7 @@ const AppRouter = () => {
                 element={<HomePage/>}
             />
 
-            <Route
-                path={ROUTER.routes.USER}
-            >
+            <Route path={ROUTER.routes.USER}>
                 <Route
                     exact
                     path=":id"
@@ -26,7 +24,7 @@ const AppRouter = () => {
                 />
 
                 <Route
-                    path={`:id${ROUTER.routes.TODO}/:numb`}
+                    path={`:userId${ROUTER.routes.TODO}/:todoId`}
                     element={<TodoPage/>}
                 />
             </Route>
