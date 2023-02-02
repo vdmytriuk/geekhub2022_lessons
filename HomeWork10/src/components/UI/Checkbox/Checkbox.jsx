@@ -1,8 +1,6 @@
-import React, {useId, useState} from 'react';
+import React, {useState} from 'react';
 
-const Checkbox = ({option, value, setValue}) => {
-    const fieldId = useId();
-
+const Checkbox = ({value, setValue, label, onChange: propsOnChange, error, fieldId}) => {
     const [checked, setChecked] = useState(false);
 
     const onChange = (val) => {
@@ -20,16 +18,28 @@ const Checkbox = ({option, value, setValue}) => {
     return (
         <div>
             <label htmlFor={fieldId}>
-                {option.label}
+                {label}
             </label>
 
             <input
                 id={fieldId}
                 type="checkbox"
-                value={option.value}
-                onChange={(e) => onChange(e.target.value)}
+                value={value}
+                onChange={propsOnChange
+                    ? () => {
+                        propsOnChange(checked)
+                        setChecked(prevState => !prevState);
+                    }
+                    :
+                    (e) => onChange(e.target.value)}
                 checked={checked}
             />
+
+            {error &&
+                <span id={`${fieldId}Error`}>
+                    {error}
+                </span>
+            }
         </div>
     );
 };

@@ -1,33 +1,44 @@
-import RadioField from "../components/fields/RadioField/RadioField";
-import SelectField from "../components/fields/SelectField/SelectField";
 import DefaultField from "../components/fields/DefaultField/DefaultField";
-import PasswordField from "../components/fields/PasswordField/PasswordField";
-import CheckboxesField from "../components/fields/CheckboxesField/CheckboxesField";
+import FormNameField from "../components/formFields/FormNameField/FormNameField";
+import FormEmailField from "../components/formFields/FormEmailField/FormEmailField";
+import FormPasswordField from "../components/formFields/FormPasswordField/FormPasswordField";
+import FormConfirmPasswordField from "../components/formFields/FormConfirmPasswordField/FormConfirmPasswordField";
+import FormPhoneField from "../components/formFields/FormPhoneField/FormEmailField";
+import FormSelectField from "../components/formFields/FormSelectField/FormSelectField";
+import FormRadioField from "../components/formFields/FormRadioField/FormRadioField";
+import FormCheckboxesField from "../components/formFields/FormCheckboxesField/FormCheckboxesField";
+import FormCheckboxField from "../components/formFields/FormCheckboxField/FormCheckboxField";
 
 export const useField = (type) => {
-  let Field;
-
   switch (type) {
+      case "name":
+          return FormNameField;
+
+      case "email":
+          return FormEmailField;
+
+      case "phone":
+          return FormPhoneField;
+
       case "password":
+          return FormPasswordField;
+
       case "confirmPassword":
-          Field = PasswordField;
-          break;
+          return FormConfirmPasswordField;
 
       case "select":
-          Field = SelectField;
-          break;
+          return FormSelectField;
 
       case "radio":
-          Field = RadioField;
-          break;
+          return FormRadioField;
 
       case "checkboxes":
-          Field = CheckboxesField;
-          break;
+          return FormCheckboxesField;
+
+      case "checkbox":
+          return FormCheckboxField;
 
       default:
-          Field = DefaultField;
+          return DefaultField;
   }
-
-  return Field;
 }

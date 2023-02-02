@@ -1,7 +1,6 @@
 import React, {useRef} from 'react';
 
 import Form from "../../particles/Form/Form";
-import Button from "../../UI/Button/Button";
 import FormField from "../../UI/FormField/FormField";
 
 const ChangePasswordForm = () => {
@@ -22,20 +21,16 @@ const ChangePasswordForm = () => {
                     type="password"
                     name="password"
                     label="Password"
+                    required
                 />
 
                 <FormField
                     type="confirmPassword"
                     name="confirmPassword"
                     label="Confirm Password"
+                    required
                 />
             </Form>
-
-            <Button
-                onClick={() => formRef.current.submit()}
-            >
-                Submit
-            </Button>
         </>
     );
 };

@@ -1,7 +1,6 @@
 import React, {useRef, useState} from 'react';
 
 import Form from "../../particles/Form/Form";
-import Button from "../../UI/Button/Button";
 import FormField from "../../UI/FormField/FormField";
 
 const EditUserProfile = () => {
@@ -10,7 +9,7 @@ const EditUserProfile = () => {
     const [isGroupAccount, setIsGroupAccount] = useState(false);
 
     const onSubmit = (values) => {
-        console.log('values', values)
+        console.log('onSubmit', values)
     }
 
     return (
@@ -29,9 +28,10 @@ const EditUserProfile = () => {
 
                 {isGroupAccount ? (
                     <FormField
-                        type="text"
+                        type="name"
                         name="title"
                         label="Title"
+                        required
                     />
                 ) : (
                     <>
@@ -40,14 +40,15 @@ const EditUserProfile = () => {
                             name="firstName"
                             label="First Name"
                             placeholder="John"
+                            required
                         />
 
                         <FormField
-                            required
                             type="name"
                             name="lastName"
                             label="Last Name"
                             placeholder="Smite"
+                            required
                         />
                     </>
                 )}
@@ -57,6 +58,7 @@ const EditUserProfile = () => {
                     name="email"
                     label="Email"
                     placeholder="Type here..."
+                    required
                 />
 
                 <FormField
@@ -64,6 +66,7 @@ const EditUserProfile = () => {
                     name="phone"
                     label="Phone"
                     placeholder="Type here..."
+                    required
                 />
 
                 <FormField
@@ -101,10 +104,10 @@ const EditUserProfile = () => {
                         { value: 'NATIVE_HAWAIIAN_OR_OTHER_PACIFIC_ISLANDER', label: 'Native Hawaiian or Other Pacific Islander' },
                         { value: 'WHITE', label: 'White' }
                     ]}
+                    required
                 />
 
                 <FormField
-                    required
                     name="consent"
                     type="checkbox"
                     label={(
@@ -112,14 +115,9 @@ const EditUserProfile = () => {
                             By checking this box, I agree to the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.
                         </>
                     )}
+                    required
                 />
             </Form>
-
-            <Button
-                onClick={() => formRef.current.submit()}
-            >
-                Submit
-            </Button>
         </>
     );
 };

@@ -1,18 +1,16 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import RadioButton from "../../UI/RadioButton/RadioButton";
 
-const RadioField = ({fieldId, error, options, defaultChecked, ...props}) => {
+const RadioField = ({fieldId, error, options, defaultChecked, onChange}) => {
     const [value, setValue] = useState(defaultChecked);
+
+    useEffect(() => {
+        onChange(value);
+    }, [value])
 
     return (
         <>
-            <input
-                {...props}
-                type="hidden"
-                value={value}
-            />
-
             {options.map(option =>
                 <RadioButton
                     key={option.value}

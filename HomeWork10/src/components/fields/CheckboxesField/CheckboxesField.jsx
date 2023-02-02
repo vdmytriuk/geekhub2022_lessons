@@ -1,23 +1,31 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+
+import {useFormContext} from "../../particles/Form/Form";
 
 import Checkbox from "../../UI/Checkbox/Checkbox";
 
-const CheckboxesField = ({fieldId, error, options, ...props}) => {
+const CheckboxesField = ({fieldId, error, options, onChange}) => {
     const [value, setValue] = useState([]);
+    const [firstInit, setFirstInit] = useState(true);
+
+    useEffect(() => {
+        if (firstInit) {
+            setFirstInit(false);
+        }
+
+        if (!firstInit) {
+            onChange(value);
+        }
+    }, [value])
 
     return (
         <>
-            <input
-                {...props}
-                type="hidden"
-                value={value}
-            />
 
             {options.map(option =>
                 <Checkbox
                     key={option.value}
-                    option={option}
-                    value={value}
+                    label={option.label}
+                    value={option.value}
                     setValue={setValue}
                 />
             )}

@@ -1,12 +1,14 @@
 import React, {useState} from 'react';
 
+import DefaultField from "../DefaultField/DefaultField";
+
 import eye from "../../../media/eye.svg";
 import eye_closed from "../../../media/eye_closed.svg";
 
 import "./PasswordField.css";
 
 
-const PasswordField = ({fieldId, error, ...props}) => {
+const PasswordField = ({...props}) => {
     const [isVisible, setIsVisible] = useState(false);
 
     return (
@@ -14,23 +16,18 @@ const PasswordField = ({fieldId, error, ...props}) => {
             <div
                 className="password-field__input"
             >
-                <input
-                    id={fieldId}
-                    aria-describedby={`${fieldId}Error`}
+                <DefaultField
                     {...props}
                     type={isVisible ? "text" : "password"}
                 />
 
                 <span
+                    className="password-field__eye"
                     onClick={() => setIsVisible(prevState => !prevState)}
                 >
                     <img src={isVisible ? eye_closed : eye} alt="Eye"/>
                 </span>
             </div>
-
-            <span id={`${fieldId}Error`}>
-                {error}
-            </span>
         </div>
     );
 };
