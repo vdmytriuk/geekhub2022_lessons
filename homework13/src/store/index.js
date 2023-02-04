@@ -1,10 +1,12 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
 
 import news from "./news";
+import comments from "./comments";
 
 
 const rootReducer = combineReducers({
-   news
+   news,
+   comments
 });
 
 export const store = configureStore({

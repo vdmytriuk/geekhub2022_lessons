@@ -11,6 +11,8 @@ const MainPage = () => {
     const dispatch = useDispatch();
 
     const newsIds = useNewsSelector('selectNewsIds');
+    const isError = useNewsSelector('selectIsError');
+    const isLoading = useNewsSelector('selectIsLoading');
 
     const [rerender, setRerender] = useState(false);
 
@@ -27,11 +29,16 @@ const MainPage = () => {
     }, [rerender]);
 
     return (
-        <LoadingWrapper updateCallback={() => dispatch(newsOperations.getNews())}>
+        <LoadingWrapper
+            updateCallback={() => dispatch(newsOperations.getNews())}
+            isLoading={isLoading}
+            isError={isError}
+        >
             {newsIds.map(newsId => (
                 <NewsCard
                     key={newsId}
                     newsId={newsId}
+                    isAction
                 />
             ))}
         </LoadingWrapper>

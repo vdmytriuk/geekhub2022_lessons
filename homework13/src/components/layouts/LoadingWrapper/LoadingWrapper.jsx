@@ -1,18 +1,32 @@
 import React from 'react';
-import {useNewsSelector} from "../../../hooks/useNewsSelector";
+
+import {Stack} from "@mui/material";
 
 import Loader from "../../common/Loader/Loader";
 import ErrorMessage from "../../common/ErrorMessage/ErrorMessage";
 import UpdateButton from "../../UI/UpdateButton/UpdateButton";
+import BackspaceButton from "../../UI/BackspaceButton/UpdateButton";
 
-const LoadingWrapper = ({updateCallback, children}) => {
-    const isError = useNewsSelector('selectIsError');
-    const isLoading = useNewsSelector('selectIsLoading');
-
+const LoadingWrapper = ({
+    isLoading = false,
+    isError,
+    updateCallback,
+    isBackspace = false,
+    children
+}) => {
     return (
         <>
             {updateCallback &&
-                <UpdateButton updateCallback={updateCallback}/>
+                <Stack
+                    direction="row"
+                    justifyContent={isBackspace ? 'space-between' : 'flex-end'}
+                    alignItems="center"
+                    marginBottom={2}
+                >
+                    {isBackspace && <BackspaceButton/>}
+
+                    <UpdateButton updateCallback={updateCallback}/>
+                </Stack>
             }
 
             {isLoading

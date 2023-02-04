@@ -12,7 +12,8 @@ const AppLayout = ({children}) => {
             <Container
                 maxWidth="lg"
                 sx={{
-                    mt: 12
+                    mt: 12,
+                    mb: 6
                 }}
             >
                 {children}

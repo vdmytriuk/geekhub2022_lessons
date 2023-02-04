@@ -10,7 +10,6 @@ const UpdateButton = ({updateCallback}) => {
             alignItems="center"
             justifyContent="flex-end"
             gap={2}
-            marginBottom={2}
         >
             <Typography variant="h5">
                 Click to update

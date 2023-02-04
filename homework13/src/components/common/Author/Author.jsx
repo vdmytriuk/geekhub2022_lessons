@@ -4,11 +4,11 @@ import {Typography} from "@mui/material";
 
 import AppStack from "../../layouts/AppStack/AppStack";
 
-const Author = ({by}) => {
+const Author = ({by, isComment = false}) => {
     return (
         <AppStack>
             <Typography variant="h6">
-                Posted by:
+                {isComment ? 'Commented' : 'Posted'} by:
             </Typography>
 
             <Typography variant="h6" sx={{color: 'primary.main'}}>
