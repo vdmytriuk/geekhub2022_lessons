@@ -1,0 +1,71 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+:root {
+  --accent-white: #ffffff;
+  --accent-blue: #181F3C;
+  --accent-dark-grey: #111111;
+  --accent-dark-grey2: #1c1c1c;
+  --accent-light-grey3: #cccccc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  color: var(--accent-white);
+
+  background-color: var(--accent-dark-grey);
+}
+
+main {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+
+  background: transparent;
+  border: 0;
+  outline: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: 4rem;
+}
+
+h4 {
+  font-size: 3rem;
+}
