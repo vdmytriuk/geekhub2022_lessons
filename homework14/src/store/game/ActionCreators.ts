@@ -1,7 +1,6 @@
 import {AppDispatch} from "../index";
 import {addBalloon, setStarted, removeBalloon, decreaseTime, resetGame, increaseTime} from "./index";
 
-
 import getRandomNumb from "../../utils/getRandomNumb";
 
 import {IBalloon} from "../../types";
