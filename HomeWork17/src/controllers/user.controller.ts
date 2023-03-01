@@ -40,22 +40,6 @@ export class UserController {
         }
     }
 
-    // updatePost = async (req: Request, res: Response) => {
-    //     const {postId, topic, text} = req.body;
-    //
-    //     const serviceResponse: IPost | string = await appService.updatePost(+postId, topic, text);
-    //
-    //     res.send(serviceResponse);
-    // }
-    //
-    // deletePost = async (req: Request, res: Response) => {
-    //     const {id} = req.params;
-    //
-    //     const serviceResponse: string | void = await appService.deletePost(+id);
-    //
-    //     res.send(serviceResponse);
-    // }
-
     getPosts = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const {userId} = req.params
