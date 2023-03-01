@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 import {useTypedDispatch} from "../../../hooks/useTypedDispatch";
 import {useTypedSelector} from "../../../hooks/useTypedSelector";
 
-import {gameActionCreators} from "../../../store/game";
+import {startGame} from "../../../store/game/ActionCreators"
 
 import Button from "../../UI/Button/Button";
 
@@ -23,7 +23,7 @@ const StartScreen: FC = () => {
 
             <h2>Ready to {lastGame ? 'new game' : 'start'} ?</h2>
 
-            <Button onClick={() => dispatch(gameActionCreators.startGame())}>
+            <Button onClick={() => dispatch(startGame())}>
                 Start game
             </Button>
 
